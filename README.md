@@ -215,7 +215,7 @@ gulpfile.babel.js文件如下：
 import gulp from 'gulp';
 import gulpUtil from 'gulp-util';
 import webpack from 'webpack';
-import webpackConfig from './webpack.config.js';
+import webpackConfig from './webpack.config.babel.js';
 import del from 'del';
 import exec from 'exec';
 gulp.task('clean-all', function () {

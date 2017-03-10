@@ -1,19 +1,15 @@
 /**
  * Created by zhongfan on 2017/1/17.
  */
-import { render } from 'react-dom';
 import React from 'react';
-import Home from './Home';
+import ReactDOM from 'react-dom';
+import {browserHistory, Router} from 'react-router'
+import routes from './routes'
 
-var names = ['a', 'b', 'c'];
-
-render((
-    <div>
-        {
-            names.map(function (name) {
-                return <div>Hello, {name}!</div>
-            })
-        }
-        <Home />
-    </div>
+ReactDOM.render((
+    <Router history={browserHistory} routes={routes} />
 ), document.getElementById('root'));
+
+if (module.hot) {
+    module.hot.accept();
+}
